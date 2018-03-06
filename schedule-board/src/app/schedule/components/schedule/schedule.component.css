@@ -1,0 +1,86 @@
+alerts-summery {
+  z-index: 99
+}
+.container {
+  padding: 2vh 2vw;
+  background: #fff;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: table;
+  margin: auto;
+  user-select: none;
+}
+
+.container>div {
+  display: inline-block;
+  min-width: 50px;
+  /*border:1px solid red;*/
+}
+
+.container>div label {
+  display: block;
+  padding: 15px;
+  text-align: center;
+  color: #98a0a6;
+  font-size: 9pt;
+}
+
+.time-holder span,
+appointment-holder {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  font-size: 9pt;
+  border: 1px solid #eee;
+  border-top-width: 0;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.time-holder span:first-of-type,.time-holder
+appointment-holder:first-of-type {
+  border: 1px solid #eee;
+}
+
+.employee * {
+  min-width: 60px
+}
+
+.employee .time-holder span,
+.employee .time-holder appointment-holder {
+  cursor: pointer;
+  border-left-width: 0;
+}
+
+.employee .time-holder appointment-holder:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.appointment-container {
+  position: relative;
+
+}
+appointment { 
+    position:absolute;
+    
+    width:100%;
+    
+    
+    color: #fff;
+    height: 55px;
+   
+}
+
+.light-color { 
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+  cursor: default;
+}
+
+.light-color:hover { 
+  opacity: 1;
+}
+
+b { 
+  font-weight: bold
+}

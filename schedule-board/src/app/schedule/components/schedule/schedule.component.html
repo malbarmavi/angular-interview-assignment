@@ -1,0 +1,29 @@
+<alerts-summery></alerts-summery>
+<div class="container">
+  <div>
+    <label for="">&nbsp;</label>
+    <div class="time-holder">
+      <span *ngFor="let t of workingTime">
+         {{t.toString()}}
+    </span>
+    </div>
+  </div>
+
+  <div *ngFor="let e of scheduleService.getData();" class="employee">
+    <label> {{e.Name}}</label>
+    <div class="time-holder appointment-container" >
+
+      <appointment *ngFor="let a of e.Apppiments" [style.top]="a.top.toString()+'px'" (click)="removeApppiment($event,e,a)" 
+      [startTime]="a.startTime" [endTime]="a.endTime" 
+      draggable [data]="{appointment:a,employee:e}" (droped)="showError($event,a)"></appointment>
+
+      <appointment-holder *ngFor="let t of workingTime" [time]="t" [employee]="e" (click)="addAppointment($event,t,e)" 
+      dropZone (droped)="dropedHandler($event,t,e)"></appointment-holder>
+
+    </div>
+  </div>
+  <h6 class="light-color" (click)="showInfo()">* holding <u>ctrl</u> key to clone the appointment , and holding <u>alt</u> key and click to remove the appointment.</h6>
+</div>
+
+
+

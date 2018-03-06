@@ -1,0 +1,13 @@
+span { 
+    background: #4786ff !important;
+    border-radius: 4px;
+    box-shadow: 0 5px 10px rgba(71, 134, 255,0.6);
+    color: #fff;
+    margin: 4px;
+    display: block;
+    padding: 17px 0;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+    font-size: 7pt;
+    text-align: center;
+    border: 1px solid #0052f1;
+}

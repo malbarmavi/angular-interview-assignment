@@ -1,0 +1,75 @@
+div {
+  display: block;
+  margin: 10px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  min-width: 400px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  animation: open 0.3s 0s normal forwards ease-in-out;
+}
+
+div.error {
+  background: #e74c3c;
+  color: #fff;
+  border: 1px solid #c0392b;
+  box-shadow: 0 2px 5px rgba(231, 77, 61, 0.55);
+}
+
+div.success {
+  background: #2ecc71;
+  color: #fff;
+  border: 1px solid #27ae60;
+  box-shadow: 0 2px 5px rgba(39, 174, 96, 0.75);
+}
+
+.close {
+  transition: all 0.2s ease-in-out;
+  animation: close 0.6s normal forwards ease-in-out;
+}
+
+.title,
+.message {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.title {
+  font-size: 9pt;
+}
+
+.message {
+  font-size: 12pt;
+  padding: 10px 0;
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+    /*transform: scale(0.5);*/
+    transform: translateX(25px);
+  }
+  to {
+    opacity: 1;
+    /*transform: scale(1);*/
+    transform: translateX(0);
+  }
+}
+
+@keyframes close {
+  0% {
+    opacity: 1;
+    /*transform: scale(0.5);*/
+    transform: translateX(0);
+  }
+  99% {
+    opacity: 0;
+    /*transform: scale(1);*/
+    transform: translateX(25px);
+  }
+  100% {
+    display: none;
+  }
+}
